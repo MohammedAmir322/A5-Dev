@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <!-- Header -->
+    <div class="bg-white shadow-md p-4 rounded-lg flex justify-between items-center">
+        <div class="text-lg font-bold flex items-center gap-2">
+            <img class="w-10 " src="assets/logo.png" alt="">
+            Dev<span class="font-black">Board</span>
+        </div>
+        <button id="discover-back" class="bg-purple-600 text-white px-4 py-2 rounded-lg">Back to Desk</button>
+    </div>
+
+    <!-- Blog Section -->
+
+
+
+    <div class=" mt-6 p-6 ">
+        <h1 class="text-center text-2xl font-bold">Blogs</h1>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-md rounded-lg">
+        <div class="mt-6 border-b pb-4">
+            <h2 class="font-bold text-lg">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h2>
+            <p class="text-gray-600 mt-2">
+                getElementById: Select by ID.
+
+                getElementsByClassName: Select elements by class (returns HTMLCollection).
+
+                getElementsByTagName: Select by tag name (e.g., div).
+
+                querySelector: Select the first match using CSS selectors.
+
+                querySelectorAll: Select all matches (returns NodeList).
+            </p>
+        </div>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-md rounded-lg">
+        <div class="mt-6 border-b pb-4">
+            <h2 class="font-bold text-lg">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </h2>
+            <p class="text-gray-600 mt-2">
+                innerHTML: Renders HTML content inside the element (includes tags).
+
+                innerText: Shows visible text (ignores hidden elements, respects CSS).
+
+                textContent: Shows all text (including hidden text, ignores HTML tags).
+            </p>
+        </div>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-md rounded-lg">
+        <div class="mt-6 border-b pb-4">
+            <h2 class="font-bold text-lg">
+                Question-3: What is event delegation in the DOM?
+            </h2>
+            <p class="text-gray-600 mt-2">
+                Attach an event listener to a parent element instead of individual child elements. Uses event bubbling to handle events from dynamic children (e.g., buttons added later).
+            </p>
+        </div>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-md rounded-lg">
+        <div class="mt-6 border-b pb-4">
+            <h2 class="font-bold text-lg">
+                Question-4: What is event bubbling in the DOM?
+            </h2>
+            <p class="text-gray-600 mt-2">
+                When an event on a child element "bubbles up" through its parent elements in the DOM hierarchy. Use event.stopPropagation() to stop it.
+            </p>
+        </div>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-md rounded-lg">
+        <div class="mt-6 border-b pb-4">
+            <h2 class="font-bold text-lg">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+            </h2>
+            <p class="text-gray-600 mt-2">
+                Create:
+                const el = document.createElement('div');
+                <br>
+                Add:
+                parent.appendChild(el); or parent.insertBefore(el, referenceElement);
+                <br>
+                Remove:
+                el.remove(); or parent.removeChild(el);
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
