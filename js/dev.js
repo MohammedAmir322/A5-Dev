@@ -1,22 +1,32 @@
-function showAlert() {
-    alert("Board update Successfully");
-}
+let completedCount = 0;
+const totalTasks = 6;
 
+document.querySelectorAll(".completed-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        completedCount++;
+        alert("Board update Successfully");
+
+        if (completedCount === totalTasks) {
+            alert("Congratulations! You completed all tasks!");
+        }
+    });
+});
 
 const themeButton = document.getElementById("theme-button");
 
 themeButton.addEventListener("click", () => {
     document.body.style.backgroundColor =
-        "#" + Math.floor(Math.random() * 16777215).toString(16); 
-});
+        "#" + Math.floor(Math.random() * 16777215).toString(16);
 
-
-document.getElementById("discover-button").addEventListener("click", function () {
-    window.location.href = "question.html"; 
 });
 
 
 
+
+
+document.getElementById("discoverBtn").addEventListener("click", function () {
+    window.location.href = "question.html";
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -24,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let completedCount = document.getElementById("completedCount");
     let completedButtons = document.querySelectorAll(".completed-btn");
     let activityLog = document.getElementById("activityLog");
-    let clearHistoryBtn = document.getElementById("clearHistory");
+
 
     completedButtons.forEach(button => {
         button.addEventListener("click", function () {
@@ -49,10 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    clearHistoryBtn.addEventListener("click", function () {
-        activityLog.innerHTML = "";
-    });
 });
 
-
+document.getElementById('clearHistory').addEventListener('click', function () {
+    document.getElementById('activityLog').innerHTML = '';
+});
 
